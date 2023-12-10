@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MyHQ</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+
+    <script src="https://kit.fontawesome.com/f45ac8a2bc.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Heebo&family=Poppins&family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    
+    <main>
+
+      <div class="sidenav">
+
+      <a href="index.html">
+      <i id="navcur" class="fa-solid fa-screwdriver-wrench fa-xl"></i>
+      </a>
+      
+      <a href="page2.html">
+      <i id="navitem" class="fa-solid fa-gamepad fa-xl"></i>
+      </a>
+
+      <a href="page3.html">
+        <i id="navitem" class="fa-solid fa-user fa-xl"></i>
+      </a>
+
+      </div>
+
+      <div class="calculator">
+      
+        <div class="calcCard">
+
+          <form >
+            <div class="calcDisplay">
+              <input type="text" name="display">
+            </div>
+            <div>
+              <input type="button" value="AC" onclick="display.value = '' " class="calcOperator">
+              <input type="button" value="DE" onclick="display.value = display.value.toString().slice(0,-1)"  class="calcOperator">
+              <input type="button" value="." onclick="display.value += '.' "  class="calcOperator">
+              <input type="button" value="/" onclick="display.value += '/' "  class="calcOperator">
+            </div>
+            <div>
+              <input type="button" value="7" onclick="display.value += '7' ">
+              <input type="button" value="8" onclick="display.value += '8' ">
+              <input type="button" value="9" onclick="display.value += '9' ">
+              <input type="button" value="*" onclick="display.value += '*' "  class="calcOperator">
+            </div>
+            <div>
+              <input type="button" value="4" onclick="display.value += '4' ">
+              <input type="button" value="5" onclick="display.value += '5' ">
+              <input type="button" value="6" onclick="display.value += '6' ">
+              <input type="button" value="-" onclick="display.value += '-' "  class="calcOperator">
+            </div>
+            <div>
+              <input type="button" value="1" onclick="display.value += '1' ">
+              <input type="button" value="2" onclick="display.value += '2' ">
+              <input type="button" value="3" onclick="display.value += '3' ">
+              <input type="button" value="+" onclick="display.value += '+' "  class="calcOperator">
+            </div>
+            <div>
+              <input type="button" value="00" onclick="display.value += '00' ">
+              <input type="button" value="0" onclick="display.value += '0' ">
+              <input type="button" value="=" onclick="display.value = eval(display.value)" class="equalCalcBtn">
+            </div>
+          </form>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </body>
+</html>

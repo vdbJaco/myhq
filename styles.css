@@ -1,0 +1,359 @@
+:root {
+  --firstColor : rgb(157, 0, 172);
+  --secondColor : rgb(0, 155, 142);
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', sans-serif;
+  font-family: 'Heebo', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 5% 15%;
+  background-color: rgb(20, 31, 54);
+}
+
+.brokenText {
+  z-index: 10;
+  position: absolute;
+  text-align: center;
+  left: 30%;
+  top: 15%;
+  rotate: -30deg;
+  font-size: 150px;
+  color: red;
+  opacity: 0.7;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(66, 66, 66);
+  border-radius: 40px 20px 20px 40px;
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 0px;
+  width: 100px;
+  height: 100%;
+  background-color: rgb(37, 37, 37);
+  border-radius: 20px;
+}
+
+#navcur {
+  color: var(--firstColor);
+}
+
+#navitem {
+  color: rgb(126, 124, 124);
+}
+
+#navitem:hover {
+  opacity: 0.5;
+}
+
+.tools {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.5%;
+  row-gap: 2.5%;
+  grid-template-rows: auto;
+  width: 100%;
+  height: 100%;
+  padding: 50px 20px;
+}
+
+.games {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.5%;
+  row-gap: 2.5%;
+  grid-template-rows: auto;
+  width: 100%;
+  height: 100%;
+  padding: 50px 20px;
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 2.5%;
+  row-gap: 2.5%;
+  grid-template-rows: auto;
+  width: 100%;
+  height: 100%;
+  padding: 50px 20px;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(47, 1, 90);
+  border-radius: 20px;
+}
+
+.card:hover {
+  opacity: 0.7;
+}
+
+#calcThumb {
+  background-image: url(https://i.imgur.com/UcoKruq.png);
+  background-size: cover;
+}
+
+#swThumb {
+  background-image: url(https://i.imgur.com/Zispe2R.png);
+  background-size: cover;
+}
+
+#tttThumb {
+  background-image: url(https://i.imgur.com/uV0Dl3Q.png);
+  background-size: cover;
+}
+
+#mgThumb {
+  background-image: url(https://i.imgur.com/KkxMDjo.png);
+  background-size: cover;
+}
+
+/*-------------------------------------------------------------------------*/
+
+.calculator {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.calcCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  padding: 20px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  width: 50%;
+  height: 100%;
+}
+
+.calcCard form input{
+  border: 0;
+  outline: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: rgb(24, 24, 24);
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  margin: 10px;
+}
+
+form .calcDisplay {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0px;
+} 
+
+form .calcDisplay input {
+  text-align: right;
+  flex: 1;
+  font-size: 45px;
+  box-shadow: none;
+  background: transparent;
+  color: var(--firstColor);
+}
+
+form input.equalCalcBtn {
+  width: 145px;
+  background-color: var(--secondColor);
+}
+
+form input.calcOperator {
+  color: var(--secondColor);
+}
+
+/*-------------------------------------------------------------------------*/
+
+.stopWatch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+
+.stopWatchCard {
+  padding: 20px;
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  width: 50%;
+  height: fit-content;
+  text-align: center;
+  align-content: center;
+}
+
+.timerBtn {
+  width: 80px;
+  height: 30px;
+  border: none;
+  border-radius: 12px;
+  background-color: rgb(63, 63, 63);
+  color: rgb(139, 139, 139);
+  cursor: pointer;
+}
+
+#timeDisplay {
+  font-size: 75px;
+  color: var(--secondColor);
+
+}
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------*/
+
+.tttcard {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: auto;
+  width: fit-content;
+  align-items: center;
+  background-color: rgb(37, 37, 37);
+  padding: 0px 30px 15px 30px;
+  border-radius: 10px;
+}
+
+.tttcell {
+  width: 100px;
+  height: 100px;
+  border: 2px solid var(--secondColor);
+  box-shadow: 0 0 0 2px var(--secondColor);
+  line-height: 95px;
+  font-size: 60px;
+  cursor: pointer;
+  padding: 0px;
+  justify-content: center;
+  color: var(--firstColor);
+}
+
+.tictactoe {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+
+#cellContainer {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: auto;
+  margin: 0px 0px;
+}
+
+#gameName {
+  color: var(--secondColor);
+}
+
+#statusText {
+  color: var(--secondColor);
+}
+
+#restartBtn {
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  width: 300px;
+  font-size: 20px;
+  color: black;
+  background-color: var(--secondColor);
+}
+
+#restartBtn:hover {
+  background-color: var(--firstColor);
+  color: var(--secondColor);
+}
+
+/*-------------------------------------------------------------------------*/
+
+.memoryGame {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.memoryGameCard {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(37, 37, 37);
+  border-radius: 10px;
+  perspective: 1000px;
+}
+
+.memCard {
+  margin: 5px;
+  width: calc(25% - 10px);
+  height: calc(33.33% - 10px);
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+}
+
+.memCard:active {
+  transform: scale(.97);
+  transition: transform .2s;
+}
+
+.memCard.flip {
+  transform: rotateY(180deg);
+}
+
+.frontFace,
+.backFace { 
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(1, 158, 145);
+  border-radius: 5px;
+  backface-visibility: hidden;
+} 
+
+.frontFace {
+  transform: rotateY(180deg);
+}
+
+
+
